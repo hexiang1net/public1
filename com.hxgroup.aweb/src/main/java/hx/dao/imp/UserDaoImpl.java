@@ -3,11 +3,13 @@ package hx.dao.imp;
 import hx.domain.jpa.User;
 import hx.dto.UserDto;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component("UserDao01")
+@Repository("UserDao01")
 public class UserDaoImpl {
 	
 	@Autowired
@@ -25,6 +27,10 @@ public class UserDaoImpl {
 		u.setPhone(user.getPhone());
 		
 		template.save(u);
+	}
+	
+	public List<User> getAllUser(){
+		return template.find("from User");
 	}
 	
 	
