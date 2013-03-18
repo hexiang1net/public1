@@ -26,7 +26,7 @@ public class UserController {
 	}
 	
 	
-	
+	//shit
 	public UserServiceImpl getUserService() {
 		return userService;
 	}
