@@ -22,6 +22,7 @@ public class UserController {
 	public String getAllUser(ModelMap modelMap){
 		List<User> list  = userService.getAllUser();
 		modelMap.put("list", list);
+		modelMap.put("shit", " you b");
 		return "allUser";
 	}
 	

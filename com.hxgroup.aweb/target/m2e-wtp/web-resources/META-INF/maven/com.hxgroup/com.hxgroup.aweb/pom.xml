@@ -92,6 +92,19 @@
 		</dependency>
 
 		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+
+		<dependency>
 			<groupId>org.jboss.spec.javax.annotation</groupId>
 			<artifactId>jboss-annotations-api_1.1_spec</artifactId>
 			<version>1.0.1.Final</version>
