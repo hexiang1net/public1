@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl {
 	
 	
+	@Autowired
+	@Qualifier("UserDao01")
 	private UserDaoImpl userDao;
 	
 	
@@ -34,8 +36,7 @@ public class UserServiceImpl {
 		return userDao;
 	}
 	
-	@Autowired
-	@Qualifier("UserDao01")
+	
 	public void setUserDao(UserDaoImpl userDao) {
 		this.userDao = userDao;
 	}
