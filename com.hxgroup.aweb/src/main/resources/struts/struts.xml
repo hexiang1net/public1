@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="struts2" extends="struts-default">
+        
+        <action name="login" class="LoginAction" >
+        <!-- 
+            <exception-mapping result="usernameInvalid" exception="org.topCSA.s2s.exception.UsernameException" />
+            <exception-mapping result="passwordInvalid" exception="org.topCSA.s2s.exception.PasswordException" />
+             -->
+             <exception-mapping result="fail" exception="java.lang.Exception"></exception-mapping>
+            <result name="success">/struts/success.jsp</result>
+            <result name="input">/struts/login.jsp</result>
+            <!-- 
+            <result name="usernameInvalid">/usernameInvalid.jsp</result>
+            <result name="passwordInvalid">/passwordInvalid.jsp</result>
+             -->
+             <result name="fail">/struts/fail.jsp</result>
+        </action>
+        
+    </package>
+</struts>

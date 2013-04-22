@@ -21,10 +21,15 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 
+<!--  
 	<context:component-scan base-package="hx">
-		<context:include-filter type="regex" expression=".dao.*"/>
-		<context:include-filter type="regex" expression=".service.*"/>
+		<context:include-filter type="regex" expression=".dao.imp.*"/>
+		<context:include-filter type="regex" expression=".service.imp.*"/>
 	</context:component-scan>
+	-->
+	
+	
+	<context:component-scan base-package="hx.service.imp,hx.dao.imp"></context:component-scan>
 	
 	<!-- =====jdbc配置==== -->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -53,7 +58,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="packagesToScan">
 			<list>
-				<value>hx.domain</value>
+				<value>hx.domain.jpa</value>
 			</list>
 		</property>
 	</bean>
@@ -94,4 +99,8 @@
 		
 	</bean>
 	 -->
+	 
+	 <!-- struts2 的  action -->
+	 <bean name="LoginAction" class="hx.controller.struts.LoginAction"></bean>
+	 
 </beans>
