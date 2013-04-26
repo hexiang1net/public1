@@ -3,6 +3,7 @@ package hx.service.imp;
 import hx.dao.imp.UserDaoImpl;
 import hx.domain.jpa.User;
 import hx.dto.UserDto;
+import hx.service.UserService;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("UserService01")
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
 	
 	
 	@Autowired
@@ -26,7 +27,9 @@ public class UserServiceImpl {
 	
 	
 	public List<User> getAllUser(){
-		return userDao.getAllUser();
+		System.out.println(" userservice imp getAllUser ");
+		return null;
+//		return userDao.getAllUser();
 	}
 	
 	

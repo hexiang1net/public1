@@ -1,8 +1,16 @@
 package hx.controller.struts;
 
+import hx.service.UserService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
+	
+	
+	@Autowired
+	private UserService userService;
 	
 	
 	/**
@@ -43,6 +51,8 @@ public class LoginAction extends ActionSupport {
 	
 	@Override
 	public String execute() throws Exception {
+		
+		userService.getAllUser();
 		// TODO Auto-generated method stub
 		
 		if("aaa".equals(username) && "bbb".equals(password)){
